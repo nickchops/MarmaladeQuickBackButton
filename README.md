@@ -1,9 +1,10 @@
 Marmalade Quick Back Button Helper
 ==================================
 
-Helper function that adds a back button to a scene of a Marmalade Quick app
+Helper that adds a back button to a scene of a Marmalade Quick app
 
-The button can be a visual touch button and/or simply
+The button can be a visual touch button and/or simply provide support for
+the device's own physical or on-screen back button
 
 Functions:
 
