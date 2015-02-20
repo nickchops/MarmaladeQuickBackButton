@@ -149,7 +149,7 @@ function backButtonHelper:add(listenerOrParamTable, xCentre, yCentre, btnWidth, 
     end
 
     if not keyOnly then
-        self.backBtn = director:createSprite({x=appWidth/2, y=115, xAnchor=0.5, yAnchor=0.5, source=btnTexture})
+        self.backBtn = director:createSprite({x=xCentre, y=yCentre, xAnchor=0.5, yAnchor=0.5, source=btnTexture})
         
         if not btnWidth then btnWidth = self.backBtn.w end
         self.btnScale = btnWidth/self.backBtn.w
@@ -163,6 +163,17 @@ function backButtonHelper:add(listenerOrParamTable, xCentre, yCentre, btnWidth, 
         
         if pulse then
             tween:to(self.backBtn, {xScale=self.btnScale*1.1, yScale=self.btnScale*1.1, time=1.0, mode="mirror"})
+        end
+    end
+end
+
+function backButtonHelper:setCenterPosition(x,y)
+    if self.backBtn then
+        if x then
+            self.backBtn.x=x
+        end
+        if y then
+            self.backBtn.y=y
         end
     end
 end
